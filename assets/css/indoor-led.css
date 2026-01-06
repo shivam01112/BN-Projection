@@ -1,0 +1,313 @@
+/* ===================================
+   Indoor LED Section Styles
+   =================================== */
+
+.indoor-led-section {
+    position: relative;
+    padding: 120px 0;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a0505 50%, #2a0a0a 100%);
+    overflow: hidden;
+}
+
+.indoor-led-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(193,0,5,0.1)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.indoor-led-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Section Title */
+.indoor-led-section .section-sub-title .subtitle {
+    background: linear-gradient(90deg, #C10005, #f604b9);
+    color: #fff;
+    padding: 8px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.indoor-led-section .title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.indoor-led-section .description {
+    font-size: 18px;
+    line-height: 1.8;
+    opacity: 0.9;
+    max-width: 900px;
+}
+
+/* Video Cards */
+.indoor-led-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.indoor-led-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 60px rgba(193, 0, 5, 0.4);
+    border-color: rgba(193, 0, 5, 0.6);
+}
+
+.indoor-led-card .video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    overflow: hidden;
+    background: #000;
+}
+
+.indoor-led-card .indoor-led-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.indoor-led-card:hover .indoor-led-video {
+    transform: scale(1.05);
+}
+
+.indoor-led-card .video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.indoor-led-card:hover .video-overlay {
+    opacity: 1;
+}
+
+.indoor-led-card .play-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #C10005, #f604b9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.indoor-led-card:hover .play-icon {
+    transform: scale(1);
+}
+
+.indoor-led-card .play-icon i {
+    font-size: 30px;
+    color: #fff;
+    margin-left: 4px;
+}
+
+.indoor-led-card .content-box {
+    padding: 30px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.indoor-led-card .content-box .title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+.indoor-led-card .content-box .description {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Features Section */
+.indoor-led-features {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 50px 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.feature-item {
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+}
+
+.feature-item .icon-box {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #C10005, #f604b9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    transition: all 0.3s ease;
+}
+
+.feature-item:hover .icon-box {
+    transform: rotate(360deg);
+    box-shadow: 0 10px 30px rgba(193, 0, 5, 0.6);
+}
+
+.feature-item .icon-box i {
+    font-size: 36px;
+    color: #fff;
+}
+
+.feature-item .title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.feature-item .description {
+    font-size: 14px;
+    opacity: 0.8;
+    margin: 0;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 991px) {
+    .indoor-led-section {
+        padding: 80px 0;
+    }
+
+    .indoor-led-section .title {
+        font-size: 36px;
+    }
+
+    .indoor-led-section .description {
+        font-size: 16px;
+    }
+
+    .indoor-led-card .content-box {
+        padding: 25px;
+    }
+
+    .indoor-led-card .content-box .title {
+        font-size: 20px;
+    }
+
+    .indoor-led-features {
+        padding: 40px 30px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .indoor-led-section {
+        padding: 60px 0;
+    }
+
+    .indoor-led-section .title {
+        font-size: 28px;
+    }
+
+    .indoor-led-section .description {
+        font-size: 15px;
+    }
+
+    .indoor-led-card .content-box {
+        padding: 20px;
+    }
+
+    .indoor-led-card .content-box .title {
+        font-size: 18px;
+    }
+
+    .indoor-led-card .content-box .description {
+        font-size: 14px;
+    }
+
+    .feature-item .icon-box {
+        width: 60px;
+        height: 60px;
+    }
+
+    .feature-item .icon-box i {
+        font-size: 28px;
+    }
+
+    .indoor-led-features {
+        padding: 30px 20px;
+    }
+}
+
+/* Video Controls Styling */
+.indoor-led-video::-webkit-media-controls-panel {
+    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.8));
+}
+
+.indoor-led-video::-webkit-media-controls-play-button,
+.indoor-led-video::-webkit-media-controls-mute-button {
+    filter: brightness(0) invert(1);
+}
+
+/* Smooth Animations */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.indoor-led-section .section-sub-title .subtitle {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Gradient Border Animation */
+@keyframes borderGlow {
+    0%, 100% {
+        border-color: rgba(193, 0, 5, 0.3);
+    }
+    50% {
+        border-color: rgba(193, 0, 5, 0.7);
+    }
+}
+
+.indoor-led-card {
+    animation: borderGlow 3s ease-in-out infinite;
+}
