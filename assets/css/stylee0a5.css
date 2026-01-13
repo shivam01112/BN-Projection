@@ -94,13 +94,14 @@
   |
   |
   |___ END STYLESHEET INDEXING
+  shiaven m
 ***************************************************************/
 /**************************************
     Default Styles
 ***************************************/
 /*-- Variables --*/
 :root {
-  --color-primary: #C10005;
+  --color-primary: #d1013a;
   --color-primary-alt: #C10005;
   --color-secondary: #C10005;
   --color-secondary-alt: #e07bc7;
@@ -18800,6 +18801,7 @@ Timeline Area
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
   transition: 0.3s;
   display: flex;
+      height: 161px;
   align-items: center;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
