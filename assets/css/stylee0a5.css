@@ -17426,7 +17426,7 @@ Timeline Area
   position: absolute;
   top: 8px;
   left: 8px;
-  background-color: var(--color-darkest);
+  background-color:#b8baba;
 }
 .tmp-timeline-single:first-child .tmp-timeline .progress-line {
   width: 50%;
