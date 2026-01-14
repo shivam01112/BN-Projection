@@ -11349,7 +11349,7 @@ Primary style
   position: relative;
 }
 .mainmenu-nav .mainmenu li.has-droupdown .submenu {
-  min-width: 260px;
+  min-width: 268px;
   height: auto;
   position: absolute;
   top: 90%;
